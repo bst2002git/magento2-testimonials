@@ -1,0 +1,21 @@
+{
+  "name" : "ryan/magento2-testimonials",
+  "description" : "Magento2 testimonials Module",
+  "require" : {
+    "php" : "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+  },
+  "authors": [
+    {
+      "name": "Ryan fernandes",
+      "email": "ryanfern86goa@gmail.com"
+    }
+  ],
+  "type" : "magento2-module",
+  "version": "1.0.0",
+  "autoload" : {
+    "files" : ["registration.php"],
+    "psr-4" : {
+      "Ryan\\Testimonials\\" : ""
+    }
+  }
+}

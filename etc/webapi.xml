@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @Copyright © Ryan Fernandes All rights reserved.
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Testimony Service -->
+    <route url="/V1/testimonial/me" method="POST">
+        <service class="Ryan\Testimonials\Api\TestimonyRepositoryInterface" method="saveTestimony"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/testimonial" method="POST">
+        <service class="Ryan\Testimonials\Api\TestimonyRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Ryan_Testimonials::testimony" />
+        </resources>
+    </route>
+    <route url="/V1/testimonial" method="GET">
+        <service class="Ryan\Testimonials\Api\TestimonyRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/testimonial/:id" method="GET">
+        <service class="Ryan\Testimonials\Api\TestimonyRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>

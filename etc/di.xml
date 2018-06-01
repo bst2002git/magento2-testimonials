@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ryan\Testimonials\Api\Data\TestimonyInterface" type="Ryan\Testimonials\Model\Testimony" />
+    <preference for="Ryan\Testimonials\Api\TestimonyRepositoryInterface" type="Ryan\Testimonials\Model\TestimonyRepository" />
+    <preference for="Ryan\Testimonials\Api\Data\TestimonySearchResultInterface" type="Magento\Framework\Api\SearchResults" />
+</config>
